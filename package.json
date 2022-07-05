@@ -1,0 +1,32 @@
+{
+  "name": "hive-qrcode",
+  "version": "1.0.0",
+  "description": "Generate QR Codes for Hive transactions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hive-keychain/hive-qrcode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hive-keychain/hive-qrcode/issues"
+  },
+  "homepage": "https://github.com/hive-keychain/hive-qrcode#readme",
+  "dependencies": {
+    "@hiveio/dhive": "^1.2.2",
+    "hive-uri": "^0.2.4",
+    "react-qrcode-logo": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.14",
+    "react": "^18.2.0",
+    "typescript": "^4.7.4"
+  }
+}
