@@ -24,7 +24,13 @@ const HiveQRCode = ({ ops, op, withLogo = false }: Props) => {
   } else if (op) {
     value = encodeOp(op);
   }
-  return <QRCode value={value} />;
+  return (
+    <QRCode
+      value={value}
+      logoImage={withLogo ? "../logohive.png" : undefined}
+      removeQrCodeBehindLogo
+    />
+  );
 };
 
 export default HiveQRCode;
