@@ -15,9 +15,10 @@ type Ops = {
 
 type Props = {
   withLogo?: boolean;
-} & (Op | Ops);
+} & (Op | Ops) &
+  React.ComponentProps<typeof QRCode>;
 
-const HiveQRCode = ({ ops, op, withLogo = false }: Props) => {
+const HiveQRCode = ({ ops, op, withLogo = false, ...props }: Props) => {
   let value = "";
   if (ops) {
     value = encodeOps(ops);
@@ -26,8 +27,9 @@ const HiveQRCode = ({ ops, op, withLogo = false }: Props) => {
   }
   return (
     <QRCode
+      {...props}
       value={value}
-      logoImage={withLogo ? "../logohive.png" : undefined}
+      logoImage={withLogo ? "src/logohive.png" : undefined}
       removeQrCodeBehindLogo
     />
   );
