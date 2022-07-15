@@ -27,9 +27,9 @@ const HiveQRCode = ({ ops, op, withLogo = false, ...props }: Props) => {
   }
   return (
     <QRCode
+      logoImage={withLogo ? "img/logohive.png" : undefined}
       {...props}
       value={value}
-      logoImage={withLogo ? "img/logohive.png" : undefined}
       removeQrCodeBehindLogo
     />
   );
